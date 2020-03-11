@@ -1,4 +1,4 @@
-FROM php:7-cli
+FROM php:7.2-cli
 
 MAINTAINER Yannick Pereira-Reis <yannick.pereira.reis@gmail.com>
 
@@ -9,17 +9,16 @@ RUN apt-get update && \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
-    libpng12-dev \
     libbz2-dev \
-    php-pear \
     curl \
+    libxslt-dev \
     git \
     subversion \
     unzip \
     sudo \
   && rm -r /var/lib/apt/lists/*
 
-RUN docker-php-ext-install mcrypt zip bz2 mbstring \
+RUN docker-php-ext-install mcrypt zip bz2 mbstring xsl bcmath intl pdo_mysql soap \
   && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
   && docker-php-ext-install gd
 
