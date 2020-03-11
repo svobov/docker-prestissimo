@@ -19,4 +19,5 @@ make build-no-cache
 
 ## Credits
 
-Thanks to [https://github.com/hirak/prestissimo](https://github.com/hirak/prestissimo)
+Thanks to [https://github.com/hirak/prestissimo](https://github.com/hirak/prestissimo), 
+https://hub.docker.com/r/toretak/docker-prestissimo
